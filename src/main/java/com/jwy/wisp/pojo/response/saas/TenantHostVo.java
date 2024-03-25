@@ -12,7 +12,9 @@
 package com.jwy.wisp.pojo.response.saas;
 
 import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * <p>
@@ -25,6 +27,8 @@ import lombok.Data;
  */
 @Data
 @Schema(description = "tenant与host")
+@NoArgsConstructor
+@AllArgsConstructor
 public class TenantHostVo {
     @Schema(name = "tenant", description = "租户空间", example = "jwy")
     private String tenant;
