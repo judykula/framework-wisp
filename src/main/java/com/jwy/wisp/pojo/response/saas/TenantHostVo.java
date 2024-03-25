@@ -9,8 +9,9 @@
  * · · _//                                       ||
  * · · · · · · · · · · · · · · · · · ·· ·    ___//
  */
-package com.jwy.wisp.pojo.dto.saas;
+package com.jwy.wisp.pojo.response.saas;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 
 /**
@@ -23,8 +24,10 @@ import lombok.Data;
  * @date 2024/3/19
  */
 @Data
-public class TenantHost {
+@Schema(description = "tenant与host")
+public class TenantHostVo {
+    @Schema(name = "tenant", description = "租户空间", example = "jwy")
     private String tenant;
+    @Schema(name = "host", description = "域名", example = "localhost")
     private String host;
-
 }
